@@ -25,11 +25,9 @@ public class Projet extends Projet2 {
 
 	static int n = 0; // compteur pour le nombre de clics
 	
-	static JButton button; // variable représentant le bouton
-	static JButton button1;
-	static JButton button2;
-	static JButton button3;
-	static JButton button4;
+	static JButton Play; // variable représentant le bouton
+	static JButton Reset;
+	
 	
 	double Bass = 'B' ;
 	double Claque = 'C' ;
@@ -44,13 +42,25 @@ public class Projet extends Projet2 {
 	JMenuItem ouvrir_image_item, quitter_item;
 	JMenu edit_menu;
 	JMenuItem new_edit_item, ouvrir_edit_item;
+	WaveVisualizer Visualiseur;
 	
 	public Projet() {
 		super();
-
+		// Création de la fenêtre
+		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		super.setSize(1001, 1001);
+		Visualiseur = new WaveVisualizer();
+		super.add(Visualiseur);
+		
 		// Création du bouton
-		button = new JButton("Tonique");
-		button1 = new JButton("Claqué");
+		Play = new JButton("Play");
+		Reset = new JButton("Reset");
+		
+		
+		/*
+		// Création du bouton
+		play = new JButton("Tonique");
+		Reset = new JButton("Claqué");
 		button2 = new JButton("Basse");
 		button3 = new JButton("Maté Claqué");
 		button4 = new JButton("Maté Tonique");
@@ -130,11 +140,11 @@ public class Projet extends Projet2 {
 				button4.setText(String.format("Maté Claqué : %d", n));
 			}
 		});
-		
+		*/
 		
 //		Initialiser le port série
 		serialport = new COMListener();		
-		serialport.port = "COM11";
+		serialport.port = "COM1";
 		serialport.rate = 9600;
 		serialport.Init();
 	}
@@ -151,7 +161,7 @@ public class Projet extends Projet2 {
 			// lecture du port série
 		
 			
-			commande = "type de son = intensite";
+			commande = "type de son = intensite ";
 			
 			while (true) {
 				if (serialport.DataAvail() > 0) {
