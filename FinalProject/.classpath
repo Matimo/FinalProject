@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="java/nio/" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="src/gnu.io.rxtx_2.1.7.4_v20071016.jar"/>
 	<classpathentry kind="lib" path="src/RXTXcomm.jar"/>
-	<classpathentry kind="lib" path="src/java/nio/file.java"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
