@@ -105,9 +105,9 @@ public class WaveVisualizer extends GameWindow {
 	public static void main(String[] args) {
 		new WaveVisualizer();
 		String strFilename = variableFile("B","C","T","MC","MT");
-		//if(strFilename != "B") {play (0, 1, 3);}
-		//if(strFilename != "C") play (1, 1, 1);
-		//if(strFilename != "T") play (2, 2, 2);
+		if(strFilename != "B") {play (0, 1, 3);}
+		if(strFilename != "C") play (1, 1, 1);
+		if(strFilename != "T") play (2, 2, 2);
 		if(strFilename != "MC")play (3, 1, 1);
 		if(strFilename != "MT")play (4, 1, 1);
 

@@ -41,22 +41,23 @@ public class Projet extends Projet2 {
 	JMenuItem ouvrir_image_item, quitter_item;
 	JMenu edit_menu;
 	JMenuItem new_edit_item, ouvrir_edit_item;
-	WaveVisualizer Visualiseur;
+	//WaveVisualizer Visualiseur;
 	
 	public Projet() {
 		super();
-		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		super.setSize(1000, 1000);
-
 		// Création de la fenêtre
 		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		super.setSize(1001, 1001);
-		Visualiseur = new WaveVisualizer();
-		super.add(Visualiseur);
+		Container contentPane = super.getContentPane();
+		//Visualiseur = new WaveVisualizer();
+		//contentPane.add(Visualiseur);
 		
 		// Création du bouton
 		Play = new JButton("Play");
 		Reset = new JButton("Reset");
+		contentPane.add(Play);
+		contentPane.add(Reset);
+		
 		
 		
 		/*
@@ -152,10 +153,11 @@ public class Projet extends Projet2 {
 		serialport.Write('b');
 	}
 
+	
 	public static void main(String[] args) {
 		new Projet();
 	}
-
+	
 	public void OuvrirFichier() {
 
 		String commande = "";

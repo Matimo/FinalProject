@@ -6,6 +6,7 @@ import javax.swing.JSeparator;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import java.awt.BorderLayout;
+import java.awt.Container;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.io.File;
@@ -17,7 +18,7 @@ public class projet1 extends GameWindow {
 	JMenuItem ouvrir_Fichier_item, quitter_item;
 	JMenu edit_menu;
 	JMenuItem new_edit_item, ouvrir_edit_item;
-
+	
 	// Création de la barre de menu et des items
 	public projet1() {
 		super();
