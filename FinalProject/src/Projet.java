@@ -25,11 +25,8 @@ public class Projet extends Projet2 {
 
 	static int n = 0; // compteur pour le nombre de clics
 	
-	static JButton button; // variable représentant le bouton
-	static JButton button1;
-	static JButton button2;
-	static JButton button3;
-	static JButton button4;
+	static JButton Reset; // variable représentant le bouton
+	static JButton Play;
 	
 	double Bass = 'B' ;
 	double Claque = 'C' ;
@@ -47,7 +44,9 @@ public class Projet extends Projet2 {
 	
 	public Projet() {
 		super();
-
+		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		super.setSize(200, 200);
+/*
 		// Création du bouton
 		button = new JButton("Tonique");
 		button1 = new JButton("Claqué");
@@ -130,7 +129,7 @@ public class Projet extends Projet2 {
 				button4.setText(String.format("Maté Claqué : %d", n));
 			}
 		});
-		
+		*/
 		
 //		Initialiser le port série
 		serialport = new COMListener();		
