@@ -41,29 +41,15 @@ public class Projet extends Projet2 {
 	JMenuItem ouvrir_image_item, quitter_item;
 	JMenu edit_menu;
 	JMenuItem new_edit_item, ouvrir_edit_item;
-	//WaveVisualizer Visualiseur;
 	
 	public Projet() {
 		super();
-		// Création de la fenêtre
 		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		super.setSize(1001, 1001);
-		Container contentPane = super.getContentPane();
-		//Visualiseur = new WaveVisualizer();
-		//contentPane.add(Visualiseur);
-		
+		super.setSize(200, 200);
+/*
 		// Création du bouton
-		Play = new JButton("Play");
-		Reset = new JButton("Reset");
-		contentPane.add(Play);
-		contentPane.add(Reset);
-		
-		
-		
-		/*
-		// Création du bouton
-		play = new JButton("Tonique");
-		Reset = new JButton("Claqué");
+		button = new JButton("Tonique");
+		button1 = new JButton("Claqué");
 		button2 = new JButton("Basse");
 		button3 = new JButton("Maté Claqué");
 		button4 = new JButton("Maté Tonique");
@@ -147,12 +133,10 @@ public class Projet extends Projet2 {
 		
 //		Initialiser le port série
 		serialport = new COMListener();		
-		serialport.port = "COM1";
+		serialport.port = "COM11";
 		serialport.rate = 9600;
 		serialport.Init();
-		serialport.Write('b');
 	}
-
 	public void SetMenuActions() {
 		quitter_item.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -175,11 +159,10 @@ public class Projet extends Projet2 {
 
 		
 	}
-	
 	public static void main(String[] args) {
 		new Projet();
 	}
-	
+
 	public void OuvrirFichier() {
 
 		String commande = "";
@@ -188,7 +171,7 @@ public class Projet extends Projet2 {
 			// lecture du port série
 		
 			
-			commande = "type de son = intensite ";
+			commande = "type de son = intensite";
 			
 			while (true) {
 				if (serialport.DataAvail() > 0) {
