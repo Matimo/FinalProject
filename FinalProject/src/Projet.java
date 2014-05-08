@@ -137,7 +137,28 @@ public class Projet extends Projet2 {
 		serialport.rate = 9600;
 		serialport.Init();
 	}
+	public void SetMenuActions() {
+		quitter_item.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Close();
+				// System.exit(0);
+			}
+		});
 
+		ouvrir_Fichier_item.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 OuvrirFichier(".","WAV files","WAV");
+			}
+		});
+
+		new_edit_item.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				NewEdit();
+			}
+		});
+
+		
+	}
 	public static void main(String[] args) {
 		new Projet();
 	}
