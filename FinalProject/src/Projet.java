@@ -45,7 +45,7 @@ public class Projet extends Projet2 {
 	public Projet() {
 		super();
 		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		super.setSize(200, 200);
+		super.setSize(1000, 1000);
 /*
 		// Création du bouton
 		button = new JButton("Tonique");
@@ -133,9 +133,10 @@ public class Projet extends Projet2 {
 		
 //		Initialiser le port série
 		serialport = new COMListener();		
-		serialport.port = "COM11";
+		serialport.port = "COM1";
 		serialport.rate = 9600;
 		serialport.Init();
+		serialport.Write('b');
 	}
 
 	public static void main(String[] args) {
